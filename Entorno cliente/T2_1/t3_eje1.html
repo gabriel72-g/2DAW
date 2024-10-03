@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const hoy = new Date();
+    
+    const anio = hoy.getFullYear();
+    let fechaNavidad = new Date(anio, 11, 19);
+    const diferencia = fechaNavidad - hoy;
+    const milisegundos = 1000 * 60 * 60 * 24;
+    const dia = diferencia / milisegundos;
+
+
+    document.write("Faltan "+dia+" para el 19 de diciembre");
+
+
+
+
+    </script>
+</body>
+</html>

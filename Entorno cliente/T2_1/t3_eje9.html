@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const frase = prompt("Escriba una frase");
+        let num = 0;
+        for(let i=0;i<frase.length;i++){
+            if(frase[i].toLocaleLowerCase() === "a"|| frase[i].toLocaleLowerCase() === "e" || frase[i].toLocaleLowerCase() === "i" || frase[i].toLocaleLowerCase() === "o" || frase[i].toLocaleLowerCase() === "u"){
+                num++;
+            }
+        }
+        document.write("El numero de a en el texto es: "+num);
+    </script>
+</body>
+</html>
