@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cerrar()">cerrar</button>
+    
+    <script>
+    const frase = prompt("Escribe una frase");
+    const abriendo = window.open("","","top=0,left=1070,width=400,height=500");
+    abriendo.document.write(frase);
+    
+    function cerrar(){
+    abriendo.close();
+    }
+
+    </script>
+</body>
+</html>

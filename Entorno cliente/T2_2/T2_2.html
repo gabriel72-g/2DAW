@@ -5,7 +5,7 @@
     <title>Reloj en JavaScript</title>
     <script>
         function mostrarHora() {
-            const ahora = new Date();
+            const ahora = new Date(); // Obtener la hora actual
             let horas = ahora.getHours();
             let minutos = ahora.getMinutes();
             let segundos = ahora.getSeconds();
@@ -16,7 +16,11 @@
 
             document.write(horas + ":" + minutos + ":" + segundos + "<br>");
 
-            setTimeout(mostrarHora, 1000);
+            if (horas === '00' && minutos === '00' && segundos === '00') {
+                location.href = "https://www.google.com";
+            } else {
+                setTimeout(mostrarHora, 1000);
+            }
         }
 
         mostrarHora();

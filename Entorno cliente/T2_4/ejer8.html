@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Aleatoria</title>
+</head>
+<body>
+    <img id="img1" src="img/images (1).jpg" alt="Imagen 1" style="display:none;">
+    <img id="img2" src="img/images.jpg" alt="Imagen 2" style="display:none;">
+    <img id="img3" src="img/perros-expresiones-faciales-fingir-caras-humanos2.jpg" alt="Imagen 3" style="display:none;">
+
+    <script>
+        const imagenes = [
+            document.getElementById("img1"),
+            document.getElementById("img2"),
+            document.getElementById("img3")
+        ];
+
+        const indiceAleatorio = Math.floor(Math.random() * imagenes.length);
+
+        document.write('<img src="' + imagenes[indiceAleatorio].src + '" alt="Imagen Aleatoria">');
+    </script>
+
+</body>
+</html>

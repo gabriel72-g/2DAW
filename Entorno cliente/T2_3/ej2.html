@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="abriendo()">abrir</button>
+    <button onclick="cerrar()">cerrar</button>
+    <script>
+    let abrir;
+        function abriendo(){
+            abrir=window.open("","","");
+            abrir.document.write(" <button onclick='cerrar()'>cerrar</button>"+
+                "<script>  function cerrar() { abrir.close(); } /script>"
+            );
+        }
+        function cerrar() {
+        abrir.close();
+    }
+    </script>
+    
+</body>
+</html>

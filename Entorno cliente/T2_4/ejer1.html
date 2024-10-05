@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const entre = Math.floor(Math.random());
+       document.write(entre);
+       const entre2 = Math.floor(Math.random()* (200-100)+100);
+       document.write("<br>"+entre2);
+       const valor_max = prompt("Escriba el numero maximo");
+       const valor_min = prompt("Escriba el numero minimo");
+       const entre3 =Math.floor(Math.random()* (parseInt(valor_max)-parseInt(valor_min))+parseInt(valor_min));
+       document.write("<br>"+entre3);
+    </script>
+</body>
+</html>
