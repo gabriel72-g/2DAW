@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Prueba de Función</title>
+  </head>
+  
+  <body>
+    <p id="resultado"></p>
+    <p id="resultado2"></p>
+    <p id="resultado3"></p>
+    <p id="resultado4"></p>
+    <p id="resultado5"></p>
+    <!-- Cargar el archivo de funciones -->
+    <script type="text/javascript" src="funcion.js"></script>
+
+    <!-- Código que usa las funciones cargadas -->
+    <script type="text/javascript">
+      let cadena = "hola";
+
+      document.getElementById("resultado").textContent = invierteCadena(cadena);
+
+      let frase = "hola como estas";
+      document.getElementById("resultado2").textContent = inviertePalabras(frase);
+
+      document.getElementById("resultado3").textContent = encuentraPalabraMasLarga(frase);
+      document.getElementById("resultado4").textContent = fltraPalabrasMasLargas(frase);
+      document.getElementById("resultado5").textContent = cadenaBienFormada(frase);
+
+    </script>
+  </body>
+</html>
