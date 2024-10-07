@@ -10,13 +10,11 @@
     <button onclick="cerrar()">cerrar</button>
     <script>
     let abrir;
-        function abriendo(){
+    function abriendo(){
             abrir=window.open("","","");
-            abrir.document.write(" <button onclick='cerrar()'>cerrar</button>"+
-                "<script>  function cerrar() { abrir.close(); } /script>"
-            );
+            abrir.document.write("<button onclick='window.close()'>cerrar</button>");
         }
-        function cerrar() {
+    function cerrar(){
         abrir.close();
     }
     </script>

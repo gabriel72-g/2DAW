@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="cursor: pointer; color: blue;" onclick="abrir()">Haz clic aquí</p>
+
+    <script>
+        function abrir(){
+            let frase = "Ventana 1";
+        const abriendo = window.open("","","width=350,height=350");
+        abriendo.document.write(frase+"<br><button onclick='window.close()'>cerrar</button>");
+            frase ="Ventana 2";
+        const abriendo2 = window.open("","","width=350,height=350");
+        abriendo2.document.write(frase+"<br><button onclick='window.close()'>cerrar</button>");
+        frase ="Ventana 3";
+        const abriendo3 = window.open("","","width=350,height=350");
+        abriendo3.document.write(frase+"<br><button onclick='window.close()'>cerrar</button>");
+        frase ="Ventana 4";
+        const abriendo4 = window.open("","","width=350,height=350");
+        abriendo4.document.write(frase+"<br><button onclick='window.close()'>cerrar</button>");
+        frase ="Ventana 5";
+        const abriendo5 = window.open("","","width=350,height=350");
+        abriendo5.document.write(frase+"<br><button onclick='window.close()'>cerrar</button>");
+        }
+
+        function cerrar(){
+        abriendo.close();
+        }
+    
+        </script>
+</body>
+</html>

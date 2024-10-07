@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Secundaria</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        function recibeMensaje(texto) {
+            var objeto = document.getElementById("parrafo");
+            objeto.innerHTML = texto;
+        }
+
+       
+        function abriendo() {
+            abrir = window.open("", "", "");
+            abrir.document.write("<button onclick='window.close()'>cerrar</button>");
+        }
+
+       
+        function cerrarse() {
+            if (abrir) {
+                abrir.close();
+            }
+        }
+
+        function enviarMensaje() {
+            if (abrir) {
+                abrir.recibeMensaje("¡Hola desde la ventana principal!"); 
+            }
+        }
+    </script>
+    <button onclick="abriendo()">abrir</button> 
+    <button onclick="cerrarse()">cerrar</button> 
+    <button onclick="enviarMensaje()">Enviar Mensaje</button>
+</body>
+</html>
