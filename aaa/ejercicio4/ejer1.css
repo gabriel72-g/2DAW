@@ -1,0 +1,19 @@
+#azul{
+    border:solid ;
+    border-color: blue;
+}
+#verde{
+    border: 5px;
+    border-color: green;
+    border-style: dotted;
+}
+#morado{
+    border-color: purple;
+    border-style: dashed;
+}
+#mixto{
+    border: 5px double purple;
+    border-top-color: yellow;
+
+   
+}

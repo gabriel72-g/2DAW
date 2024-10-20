@@ -3,71 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario con Validaciones HTML</title>
 </head>
 <body>
     <form action="">
-        <fieldset>
-            <legend>Datos personales</legend>
-        <p><label for="nombre">Tu nombre(*)</label></p>
-        <p><input type="text" required id="nombre"/>
-        <label for="apellidos">Tu apellidos</label>
-        <input type="text" required id="apellidos"/>
-        <label for="DNI">DNI(*)</label>
-        <input type="text" required  id="DNI">
-        </p>
-        <p><label for="localidad">localidad de nacimiento</label></p>
-        <p><input type="text" name="localidad" id="">
-        <label for="provincia">Provincia</label>
-            <select name="" id="provincia">
-                <option value="">Huelva</option>
-                <option value="">Sevilla</option>
-                <option value="">Cadiz</option>
-                <option value="">Córdoba</option>
-                <option value="">Jaén</option>
-                <option value="">Granada</option>
-                <option value="">Málaga</option>
-                <option value="">Almería</option>
+        <fieldset style="background-color: #63594D;">
+            <legend style="background-color: white; border: 2px solid; ">Datos Personales</legend>
+            <table style="color: white;">
+                <tr>
+                    <td><label for="nombre">Nombre (*):</label></td>
+                    <td><input type="text" id="nombre" required /></td>
+                    
+                    <td><label for="apellidos">Apellidos (*):</label></td>
+                    <td><input type="text" id="apellidos" required /></td>
+
+                    <td><label for="dni">DNI (*):</label></td>
+                    <td><input type="text" id="dni" required /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="localidad">Localidad de Nacimiento:</label></td>
+                    <td><input type="text" id="localidad" /></td>
+
+                    <td><label for="provincia">Provincia:</label></td>
+                    <td>
+                        <select id="provincia" required>
+                            <option value="">Seleccione</option>
+                            <option value="huelva">Huelva</option>
+                            <option value="sevilla">Sevilla</option>
+                            <option value="cadiz">Cádiz</option>
+                            <option value="cordoba">Córdoba</option>
+                            <option value="jaen">Jaén</option>
+                            <option value="granada">Granada</option>
+                            <option value="malaga">Málaga</option>
+                            <option value="almeria">Almería</option>
+                        </select>
+                    </td>
+
+                    <td><label for="fecha">Fecha de Nacimiento:</label></td>
+                    <td><input type="date" id="fecha" required /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="direccion">Dirección (*):</label></td>
+                    <td colspan="3"><input type="text" id="direccion" required style="width: 100%;" /></td>
+
+                    <td><label for="postal">Código Postal:</label></td>
+                    <td>
+                        <input type="text" id="postal" pattern="\d{5}" required />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email (*):</label></td>
+                    <td colspan="3">
+                        <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@iesiliberis\.com"  required />
+                    </td>
+
+                    <td><label for="telefono">Teléfono (*):</label></td>
+                    <td>
+                        <input type="text" id="telefono" pattern="\d{9}" title="Debe tener exactamente 9 dígitos" required />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Contraseña (*):</label></td>
+                    <td>
+                        <input type="password" id="password" 
+                               pattern="(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}" required />
+                    </td>
+
+                    <td><label for="codigo-id">Código ID (*):</label></td>
+                    <td>
+                        <input type="text" id="codigo-id" pattern="[A-Za-z]{3}-\d{4}"  required />
+                    </td>
+
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset style="background-color: #B18272;">
+            <legend style="background-color: white; border: 2px solid">Forma de Acceso</legend>
+            <p><input type="radio" name="acceso" value="directo" required /> Directo</p>
+            <p><input type="radio" name="acceso" value="bachillerato" /> Bachillerato Log Modalidad <input type="text" /></p>
+            <p><input type="radio" name="acceso" value="experimental" /> Experimental</p>
+            <p><input type="radio" name="acceso" value="cou" /> COU Opción <input type="text" /></p>
+            <p><input type="radio" name="acceso" value="fp2" /> FP2</p>
+            <p><input type="radio" name="acceso" value="otros" /> Otros (especifique) <input type="text" /></p>
+            <p><input type="radio" name="acceso" value="prueba" /> Prueba Libre</p>
+        </fieldset>
+
+        <fieldset style="background-color: #C2B291;">
+            <legend style="background-color: white; border: 2px solid">Documentos Adjuntados</legend>
+            <p><input type="checkbox" name="doc" value="fotocopia" /> Fotocopia DNI <input type="checkbox" name="Certificado" value="Certificado" /> Certificado academico</p>
+            <p><input type="checkbox" name="doc" value="certificado" /> Certificado Académico</p>
+            <p><input type="checkbox" name="doc" value="otros-doc" /> Otros Documentos <input type="text" /></p>
+            <p><input type="file" /></p>
+        </fieldset>
+        <fieldset style="background-color: #D6E4C3;">
+            <legend style="background-color: white ; border: 2px solid">Documentos Adjuntados</legend>
+            <p><label for="codigo">Código Personalizado</label><input type="text" name="codigo"/></p>
+            <p><label for="grupo">Grupo del curso</label><input type="text" name="grupo"/></p>
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" required>
+                <option value="huelva">ingles</option>
+                <option value="sevilla">frances</option>
+                <option value="cadiz">alemán</option>
+                <option value="cordoba">Portugués</option>
+                <option value="jaen">Italiano</option>
+                <option value="granada">Japones</option>
             </select>
-        <label for="fecha">Fecha de nacimiento</label>
-        <input type="date"  id="fecha"/>
-        </p>
-        <p><label for="direccion">Dirección</label>
-        <input type="text" required id="direccion">
-        <label for="postal">Codigo postal</label>
-        <input type="number" min="5" max="5" id="postal">
-        </p>
-        <p><label for="email">EMAIL(*)</label>
-        <input type="email" required id="email">
-        <label for="numero">Teléfono</label>
-        <input type="number"required min="9" max="9" id="numero">
-        </p>
+            <p><label for="certificado">Certificación en idiomas</label><input type="text" name="certificado"  pattern="^(A[1-2]|B[1-2]|C[1-2])$" /></p>
+        </fieldset>
+        <fieldset style="background-color: #EAE3D1;">
+            <legend style="background-color: white; border: 2px solid">Otros datos</legend>
+            <p>Indique cualquier otra cosa a tener en cuenta</p>
+        <textarea name="" id="">dejanos tu comentario </textarea>
     </fieldset>
-    <fieldset>
-    <legend>Forma de Acceso</legend>
-        <p><input type="radio" name="" id="">Directo</p>
-    <p><input type="radio" name="" id="">Bachillerato Log Modalidad <input type="text"></p>
-    <p><input type="radio" name="" id="">Experimental</p>
-    <p><input type="radio" name="" id="">COU Opción <input type="text"></p>
-    <p><input type="radio" name="" id="">FP2</p>
-    <p><input type="radio" name="" id="">Otros(especifique) <input type="text"></p>
-    <p><input type="radio" name="" id="">Prueba Libre</p>
-    </fieldset>
-    <fieldset>
-    <legend>Documentos Adjuntados</legend>
-    <p><input type="checkbox" name="" id="">Fotocopia DNI</p>
-    <p><input type="checkbox" name="" id="">Certificado Académico</p>
-    <p><input type="checkbox" name="" id="">Otros Documentos <input type="text"></p>
-    <p><input type="file"></p>
-    </fieldset>
-    <fieldset>
-    <legend>Personaliza</legend>
-    <p><label for="codigo">Codigo Personalizado</label><input type="text" name="" id="codigo"></p>
-    <p><label for="codigo">Codigo Personalizado</label><input type="text" name="" id="codigo"></p>
-    <p><label for="codigo">Codigo Personalizado</label><input type="text" name="" id="codigo"></p>
-
-
-    </fieldset>
+        <button type="submit">Enviar</button>
+        <button type="reset">Resetear</button>
     </form>
 </body>
 </html>

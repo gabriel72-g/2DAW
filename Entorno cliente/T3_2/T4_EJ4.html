@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = ["perro", "programar", "azul", "rojo", "verde"];
+        let array2 = ["azul", "libro", "perro", "puerta", "rojo"];
+
+    
+        let interseccion = [];
+        for (let palabra of array1) {
+            if (array2.includes(palabra)) {
+                interseccion.push(palabra);
+            }
+        }
+
+        
+        let union = array1.slice();
+        for (let palabra of array2) {
+            if (!union.includes(palabra)) {
+                union.push(palabra);
+            }
+        }
+
+       
+        let diferencia = [];
+        for (let palabra of array1) {
+            if (!array2.includes(palabra)) {
+                diferencia.push(palabra);
+            }
+        }
+
+        document.write("<h2>Operaciones con Arrays</h2>");
+        document.write("Intersección: " + interseccion.join(", ")+"<br>");
+        document.write("Unión: " + union.join(", ")+"<br>");
+        document.write("Diferencia: " + diferencia.join(", "));
+    </script>
+</body>
+</html>

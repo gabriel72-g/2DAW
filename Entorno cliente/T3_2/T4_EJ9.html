@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let texto = prompt("Introduce una frase o texto:");
+
+            let palabras = texto.split(" ");
+
+            let numeroPalabras = palabras.length;
+            let primeraPalabra = palabras[0];
+            let ultimaPalabra = palabras[palabras.length - 1];
+            let palabrasInversas = palabras.slice().reverse();
+            let palabrasAZ = palabras.slice().sort();
+            let palabrasZA = palabras.slice().sort().reverse();
+
+
+        
+            document.write("<h2>Información del Texto</h2>");
+            document.write("Número de palabras: " + numeroPalabras + "<br>");
+            document.write("Primera palabra: " + primeraPalabra + "<br>");
+            document.write("Última palabra: " + ultimaPalabra + "<br>");
+            document.write("Palabras en orden inverso: " + palabrasInversas.join(" ") + "<br>");
+            document.write("Palabras de A a Z: " + palabrasAZ.join(" ") + "<br>");
+            document.write("Palabras de Z a A: " + palabrasZA.join(" ") + "<br>");
+    </script>
+</body>
+</html>

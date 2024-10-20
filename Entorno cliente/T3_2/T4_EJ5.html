@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let numeros = [];
+
+            for (let i = 0; i < 20; i++) {
+                let numeroAleatorio = Math.floor(Math.random() * 101);
+                numeros.push(numeroAleatorio);
+            }
+
+            document.write("<h2>Números generados:</h2>");
+            document.write(numeros.join(", ") + "<br>");
+
+            let minimo = Math.min(...numeros);
+            let maximo = Math.max(...numeros);
+            let suma = numeros.reduce((a, b) => a + b, 0);
+            let promedio = suma / numeros.length;
+
+            document.write("<h2>Resultados:</h2>");
+            document.write("Valor mínimo: " + minimo + "<br>");
+            document.write("Valor máximo: " + maximo + "<br>");
+            document.write("Valor medio: " + promedio.toFixed(2) + "<br>");
+    </script>
+</body>
+</html>

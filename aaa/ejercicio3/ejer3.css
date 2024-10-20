@@ -1,0 +1,16 @@
+body{
+    counter-reset: parte;
+
+}
+h2{
+    counter-reset: parte2;
+}
+h2::before{
+    content: "Parte " counter(parte) " ";
+    counter-increment: parte;
+
+}
+h3::before{
+    content: counter(parte) "." counter(parte2) ") ";
+    counter-increment: parte2;
+}

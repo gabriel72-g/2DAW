@@ -1,0 +1,33 @@
+header{
+    background-color: gray;
+    align-items: center;
+    color: aliceblue;
+}
+h1{
+    align-items: center;
+}
+h2::first-letter{
+    color: blue;
+}
+p::first-line{
+    color: green;
+}
+.prueba:hover{
+    color: red;
+}
+a:hover{
+    color: red;
+}*
+p::after{
+    content: "Aloja more don👌";
+    color: red;
+}
+p::before{
+    content: "*.👌";
+}
+p::selection{
+    background-color: yellow;
+}
+section::before{
+    content: "Ticulo del articulo:";
+}

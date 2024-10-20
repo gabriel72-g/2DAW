@@ -1,0 +1,21 @@
+body{
+    counter-reset: parte;
+}
+h2::before{
+    content: "Cápitulo " counter(parte) ": ";
+    color: blue;
+    counter-increment: parte;
+}
+h2{
+    counter-reset: parte2;
+}
+h3::after{
+    content: " -Sucesion  " counter(parte)"."counter(parte2);
+    color:green;
+    font-style: italic;
+    counter-increment: parte2;
+    
+}
+h3{
+    counter-reset: parte3;
+}

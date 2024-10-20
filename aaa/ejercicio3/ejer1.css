@@ -1,0 +1,19 @@
+#nombre{
+    background-color: green;
+}
+#nombre:focus{
+    background-color: aquamarine;
+}
+#edad{
+    background-color: red;
+}
+#hombre:checked + label{
+    font-style: italic;
+}
+#mujer:checked + label{
+    font-style: italic;
+}
+
+#robot:checked + label{
+    background-color: yellow;
+}

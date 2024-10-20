@@ -1,0 +1,47 @@
+.color li:first-child{
+    background-color: green;
+}
+.color li:last-child{
+    background-color: red;
+}
+.sub p:first-child{
+    border-top: 2px solid black;
+}
+.sub p:last-child{
+    border-bottom: 2px solid black;
+}
+.pares li:nth-child(even){
+    text-decoration: underline;
+}
+.pares li:nth-child(odd){
+    text-decoration: line-through;
+}
+.multipos li:nth-child(4n){
+    color: green;
+}
+section h2:nth-child(odd){
+    text-decoration: underline;
+}
+.negrita p strong:first-of-type{
+    background-color: yellowgreen;
+}
+.semana li::first-letter{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.esclamacion p strong:first-of-type{
+    background-color: yellowgreen;
+}
+.esclamacion p strong::before{
+    content: "¡";
+}
+.esclamacion p strong::after{
+    content: "!";
+}
+.icono p::before {
+    content: "- 😡"; 
+    color: red;
+    font-size: 18px;
+   
+    
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+
+        <h1>Ejemplos de Navegador</h1>
+    
+        <!-- a) Desplazarse hasta un marcador -->
+        <a href="#marcador" onclick="mostrarMarcador()">a) Desplazarse hasta un marcador y mostrar su nombre</a>
+    
+        <!-- b) Mostrar el nombre del host -->
+        <a href="#" onclick="mostrarHost()">b) Mostrar el nombre del host de la página actual</a>
+    
+        <!-- c) Mostrar la URL completa de la página actual -->
+        <a href="#" onclick="mostrarURL()">c) Mostrar la URL completa de la página actual</a>
+    
+        <!-- d) Preguntar por una dirección y activarla -->
+        <a href="#" onclick="navegarA()">d) Introducir una dirección y navegar a ella</a>
+    
+        <!-- e) Mostrar el protocolo de la página actual -->
+        <a href="#" onclick="mostrarProtocolo()">e) Mostrar el protocolo de la página actual</a>
+    
+        <!-- f) Recargar la página actual -->
+        <a href="#" onclick="recargarPagina()">f) Recargar la página actual</a>
+    
+        <!-- Marcador (a) -->
+        <p style="margin-top: 500px;">
+            <a id="marcador" href="#" onclick="mostrarMarcador()">Este es el marcador</a>
+        </p>
+    
+        <script>
+            // a) Desplazarse hasta un marcador y mostrar su nombre
+            function mostrarMarcador() {
+                alert("Este enlace es el marcador.");
+            }
+    
+            // b) Mostrar el nombre del host de la página actual
+            function mostrarHost() {
+                alert("El host es: " + window.location.hostname);
+            }
+    
+            // c) Mostrar la URL completa de la página actual
+            function mostrarURL() {
+                alert("La URL completa es: " + window.location.href);
+            }
+    
+            // d) Preguntar por una dirección y navegar a ella
+            function navegarA() {
+                var direccion = prompt("Introduce la URL a la que deseas navegar (ejemplo: https://www.google.com):");
+                if (direccion) {
+                    window.location.href = direccion;
+                }
+            }
+    
+            // e) Mostrar el protocolo de la página actual
+            function mostrarProtocolo() {
+                alert("El protocolo actual es: " + window.location.protocol);
+            }
+    
+            // f) Recargar la página actual
+            function recargarPagina() {
+                window.location.reload();
+            }
+        </script>
+    
+    </body>
+    </html>

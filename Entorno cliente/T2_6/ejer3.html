@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- Enlaces con las funciones solicitadas -->
+  <a href="#" onclick="confirmacion()">a) Abrir una ventana de confirmación</a>
+  <br>
+  <a href="#" onclick="analizarCierre()">b) Abrir y analizar si una ventana ha sido cerrada</a>
+  <br>
+  <a href="#" onclick="cambiarNombre()">c) Abrir una ventana y pedir un nuevo nombre</a>
+  <br>
+  <a href="#" onclick="cerrarActual()">d) Cerrar la ventana actual</a>
+  <br>
+  <a href="#" onclick="cerrarVentana()">d) Cerrar una ventana abierta con open()</a>
+  <br>
+  <a href="#" onclick="abrirVentanaRedimensionable()">f) Abrir una ventana redimensionable</a>
+  <br>
+  <a href="#" onclick="escribirEnPadre()">g) Escribir texto en la ventana padre</a>
+  <br>
+  <a href="#" onclick="moverVentana()">h) Mover la ventana 50px hacia abajo y derecha</a>
+  <br>
+  <a href="#" onclick="posicionarVentana()">i) Posicionar ventana en un lugar específico</a>
+  <br>
+  <a href="#" onclick="moverScroll()">j) Mover la barra de desplazamiento 10px hacia abajo</a>
+  <br>
+  <a href="#" onclick="posicionarScroll()">k) Desplazar la barra de desplazamiento a una posición específica</a>
+
+  <script>
+      // Variable global para almacenar una ventana nueva
+      var ventanaNueva;
+
+      // a) Abrir una ventana de confirmación
+      function confirmacion() {
+          var respuesta = confirm("¿Deseas continuar?");
+          if (respuesta) {
+              alert("Has pulsado 'Aceptar'.");
+          } else {
+              alert("Has pulsado 'Cancelar'.");
+          }
+      }
+
+      // b) Abrir una ventana y analizar si ha sido cerrada
+      function analizarCierre() {
+          ventanaNueva = window.open("", "ventanaNueva", "width=300,height=200");
+          setTimeout(function() {
+              if (ventanaNueva.closed) {
+                  alert("La ventana ha sido cerrada.");
+              } else {
+                  alert("La ventana sigue abierta.");
+              }
+          }, 3000); // Espera 3 segundos y revisa el estado de la ventana
+      }
+
+      // c) Abrir una ventana y pedir un nuevo nombre
+      function cambiarNombre() {
+          ventanaNueva = window.open("", "ventanaOriginal", "width=300,height=200");
+          var nuevoNombre = prompt("Introduce un nuevo nombre para la ventana:");
+          if (nuevoNombre) {
+              ventanaNueva.name = nuevoNombre;
+              alert("El nuevo nombre de la ventana es: " + nuevoNombre);
+          } else {
+              alert("No se ha cambiado el nombre de la ventana.");
+          }
+      }
+
+      // d) Cerrar la ventana actual
+      function cerrarActual() {
+          window.close();
+      }
+
+      // d) Cerrar una ventana abierta con open() en la variable ventanaNueva
+      function cerrarVentana() {
+          if (ventanaNueva && !ventanaNueva.closed) {
+              ventanaNueva.close();
+              alert("Ventana cerrada.");
+          } else {
+              alert("No hay ninguna ventana abierta o ya está cerrada.");
+          }
+      }
+
+      // f) Abrir una ventana de tamaño 300x100 que puede ser redimensionada
+      function abrirVentanaRedimensionable() {
+          ventanaNueva = window.open("", "", "width=300,height=100,resizable=yes");
+      }
+
+      // g) Escribir algún texto en la página padre
+      function escribirEnPadre() {
+          ventanaNueva = window.open("", "", "width=300,height=100,resizable=yes");
+          ventanaNueva.document.write("<p>Hola desde la ventana hija.</p>");
+      }
+
+      // h) Mover la ventana 50px hacia abajo y a la derecha
+      function moverVentana() {
+          ventanaNueva = window.open("", "", "width=300,height=200");
+          ventanaNueva.moveBy(50, 50);
+      }
+
+      // i) Posicionar la ventana en una posición específica (100px desde la esquina superior izquierda)
+      function posicionarVentana() {
+          ventanaNueva = window.open("", "", "width=300,height=200");
+          ventanaNueva.moveTo(100, 100);
+      }
+
+      // j) Mover la barra de desplazamiento 10px hacia abajo
+      function moverScroll() {
+          window.scrollBy(0, 10);
+      }
+
+      // k) Desplazar la barra de desplazamiento a una posición específica (por ejemplo, 100px hacia abajo)
+      function posicionarScroll() {
+          window.scrollTo(0, 100);
+      }
+
+  </script>
+</body>
+</html>
