@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabla de Factoriales</title>
+    <style>
+        table {
+            width: 50%; /* Ancho de la tabla */
+            border-collapse: collapse; /* Quita los espacios entre celdas */
+            margin: 20px auto; /* Centra la tabla en la página */
+        }
+        th, td {
+            border: 1px solid #333; /* Bordes de la tabla */
+            padding: 8px; /* Espacio interno de las celdas */
+            text-align: center; /* Centra el texto en las celdas */
+        }
+        th {
+            background-color: #f4f4f4; /* Color de fondo para el encabezado */
+        }
+    </style>
 </head>
 <body>
-    <script src="funcion.js"></script>
+
+<h1 style="text-align:center;">Tabla de Factoriales del 1 al 10</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Factorial</th>
+        </tr>
+    </thead>
+    <tbody id="tabla-factoriales">
+        <!-- Aquí se agregarán las filas con JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // Obtenemos el cuerpo de la tabla por su ID
+    const tabla = document.getElementById("tabla-factoriales");
+
+    // Recorremos los números del 1 al 10
+    for (let i = 1; i <= 10; i++) {
+        let resultado = 1; // Inicializamos el resultado en 1
+        // Calculamos el factorial
+        for (let j = 1; j <= i; j++) {
+            resultado *= j; // Multiplicamos el resultado por cada número hasta i
+        }
+        // Creamos una nueva fila
+        const fila = document.createElement("tr");
+        fila.innerHTML = `<td>${i}</td><td>${resultado}</td>`; // Añadimos los números y su factorial
+        tabla.appendChild(fila); // Añadimos la fila a la tabla
+    }
+</script>
+
 </body>
 </html>

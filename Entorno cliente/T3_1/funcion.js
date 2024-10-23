@@ -50,4 +50,9 @@ let valor = Math.PI*Math.pow(r,2);
 return Math.round(valor);
 }
 
-function 
+function calcular(base, exponente){
+    if(exponente === 0){
+        return 1;
+    }
+return base * calcular(base, exponente -1);
+}

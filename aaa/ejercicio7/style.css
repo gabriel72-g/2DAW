@@ -1,0 +1,71 @@
+section{
+    align-content: center;
+}
+div{
+   width: 300px;
+   height: 300px;
+   border: 3px red dotted;
+   margin-bottom: 50px;
+}
+.a{
+    background-color: black;
+}
+#uno{
+
+    background-image: url(assets/puesta-sol.jpg);
+}
+#dos{
+    background-image: url(assets/puesta-sol.jpg);
+    background-size: 300px;    
+}
+#tres{
+    background-image: url(assets/puesta-sol.jpg);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    
+}
+#cuatro{
+    background-color: blue;
+    background-image: url(assets/puesta-sol.jpg);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#cinco{
+    background-image: url(assets/puesta-sol.jpg);
+    background-size:cover;
+    padding:  1em;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+#seis{
+    background-color: blue;
+    background-image: url(assets/puesta-sol.jpg);
+    background-size:cover;
+    padding:  1em;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+#siete{
+    background-image: url(assets/puesta-sol.jpg);
+    width: auto;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#ocho{
+    background-image: url(assets/favicon.png) ,  url(assets/puesta-sol.jpg) ;
+    width: 70vw;
+    height: 30vh;
+    background-size: 10%,100%;
+    background-repeat: repeat-x, no-repeat;
+
+
+}
+
+
+#nueve{
+    background-image:url(assets/arbol.png), url(assets/aves.png) , url(assets/cielo.png);
+    width: 90vw;
+    height: 100vh;
+    background-size: cover;
+}
