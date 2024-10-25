@@ -1,0 +1,51 @@
+main{
+
+    display: inline-block;
+}
+div{
+    background-color: gray;
+    width: 205px;
+    height: 105px;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align:center;
+    align-content: center;
+    display: inline-block;
+}
+
+#a{
+   box-shadow: -5px -5px  red;  
+}
+#b{
+    box-shadow: -5px -5px 4px blue;
+}
+#c{
+    box-shadow: -5px -5px 0px 5px green;
+}
+#d{
+    box-shadow: -5px -5px 5px 5px steelblue;
+}
+#e{
+    box-shadow: 0px 0px 5px 5px rosybrown;
+}
+#f{
+    box-shadow: 0px 0px 5px 9px yellow;
+}
+#g{
+    box-shadow: 5px 5px 0px 5px purple;
+}
+#h{
+    box-shadow: -5px -5px 5px 5px turquoise inset;
+}
+#i{
+    box-shadow: -5px -5px 0px 5px rosybrown inset;
+}
+#j{
+    box-shadow: -5px -5px 2px 10px green inset;
+}
+#k{
+    box-shadow: 0px 0px 5px 2px purple inset;
+}
+#l{
+    box-shadow: 0px 0px 5px 5px black inset;
+}
