@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let persona={
+        nombre:"Juan",
+        edad:20
+    }
+    function edad(per){
+        if(persona.edad>=18){
+            return"Es mayor de edad";
+        }else{
+            return "Es menor de edad";
+        }
+    }
+    console.log(edad(persona));
+    function Usuario(nombre,edad){
+            this.nombre=nombre;
+            this.edad=edad;
+        }
+        let usu=new Usuario('Juan',20);
+        console.log(usu);
+
+    const ArrayAlumnos=[{
+        nombre:"Juan",
+        edad:17,
+        grupo:"1SMR",
+        notas:[4,6]
+        },{
+        nombre:"Antonio",
+        edad:15,
+        grupo:"1SMR",
+        notas:[5,8]
+    }]
+</script>
+</body>
+</html>

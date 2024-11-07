@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function telefono(numero){
+            this.numero = numero;
+            this.llamada =0;
+            this.llamadas= function(){
+                this.llamada+=1;
+                console.log("Llamada realizada. Número total de llamadas: " + this.llamada);
+
+            }
+        }
+        const tel = new telefono("12345678");
+        console.log(tel.numero);
+        console.log(tel.llamada);
+        tel.llamadas();
+        tel.llamadas();
+    </script>
+</body>
+</html>

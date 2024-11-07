@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const persona={
+            nombre:"Emilio",
+            edad:21,
+            mayorEdad: function(){
+                if(this.edad>=18){
+                    console.log("Es mayor de edad");
+                }else{
+                    console.log("Es menor de edad")
+                }
+            }
+        }
+        function persona2(nombre,edad){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.mayorEdad = function(){
+                if(this.edad>=18){
+                    console.log("Es mayor de edad");
+                }else{
+                    console.log("Es menor de edad")
+                }
+            }
+        }
+        const persona1 = new persona2("Alex",17);
+
+        const ArrayUsu=[{
+            nombre:"Emilio",
+            edad:21
+        },{
+            nombre:"Alex",
+            edad:17
+        }]
+        function calcular(arr){
+            const edad_pro = arr.reduce((suma,per)=>suma + per,0);
+            return edad_pro/arr.length;
+        }
+        const promedioEdad = calcular(ArrayUsu);
+        console.log("La edad promedio es:", promedioEdad);
+        persona.mayorEdad();
+    </script>
+</body>
+</html>

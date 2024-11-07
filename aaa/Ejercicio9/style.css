@@ -1,0 +1,73 @@
+.uno{
+    background: linear-gradient(to right ,black 0 10%, blue 19% 30%,yellow 39% 40%, green 49% 50%,red 59% 60%);
+    width: 300px;
+    height: 100px;
+}
+#dos{
+    height: 100px;
+    background: linear-gradient(blue 0% 10%,yellow 10% 20%, red 20% 30%,blue 30% 40%,yellow 40% 50%, red 50% 60%,blue 60% 70%,yellow 70% 80%, red 80% 90%,blue 90% 100%);
+}
+#tres{
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(yellow,red,black);
+}
+#cuatro{
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(ellipse,yellow 80px,red 100px,black 70%);
+}
+#cinco{
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(circle ,yellow 80px,red 120px,black 90%);
+}
+#seis{
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(circle,yellow 80px,red 120px,black 90%);
+}
+#siete{
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    background: radial-gradient(circle,blue 50px,red 120px,yellow);
+}
+#ocho{
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    background: radial-gradient(Farthest-side,blue 50px,red 120px,yellow);
+}
+#nueve{
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    background: radial-gradient(circle,blue 70px,red 130px,yellow);
+}
+#diez{
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle,pink 0% 10%,red 10% 20%,#8B0000 20% 30%,pink 30% 40%,red 40% 50%,#8B0000 50% 60%,pink 60% 70%,red 70% 80%,#8B0000 80% 90%,pink 90% 100%);
+}
+#once{
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(from 0deg,#2a6478, #284d5a);
+}
+#doce{
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background: repeating-conic-gradient( 
+        red 20deg 30deg,
+        yellow 35deg 40deg,
+        blue 45deg 50deg
+      );
+}

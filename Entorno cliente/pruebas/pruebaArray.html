@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let lista=["Peras","Manzanas","Kiwis","Platanos","mandarina"];
+        let borrar =lista.splice(1,1);
+        let añadir = lista.splice(4,0,"Naranjas","Sandias")
+        let borrarañadir = lista.splice(2,3,"Cerezas")
+        function MostrarArray(arr){
+            lista.array.array.forEach(element => {
+                
+            });
+        }
+
+
+        const alumno ={nombre:"Juan",
+        grupo:"1SMR",
+        notas:[4,6],
+        showNotas: function(){
+            console.log(this.notas)
+        this.notas.forEach(alumno =>{
+            console.log(element);
+        });
+        },
+        addNota: function (notas){
+            this.notas.push(notas);
+        },
+        addNotas : function(arrNotas){
+            this.notas.concat(arrNotas);
+        },
+        filtraNotas: function(fun){
+            const i=[]
+            this.notas.forEach( element=>{
+                if(fun(element))
+            
+            
+                {
+                    i.push(fun(element))
+                }
+            })
+            return i;
+        }
+    } 
+    alumno.filtraNotas([4,6], )
+    /* alumno.addNota(8);
+    alumno.addNotas(7,46)
+    alumno.showNotas(); */
+    const ArrayAlumnos=[{
+        nombre:"Juan",
+        edad:17,
+        grupo:"1SMR",
+        notas:[4,6]
+    },{
+        nombre:"Antonio",
+        edad:15,
+        grupo:"1SMR",
+        notas:[5,8]
+    }]
+    function comparar(nombre1,nombre2){
+        return nombre1.nombre.localeCompare(nombre2.nombre);
+    }
+
+
+    console.log(ArrayAlumnos.sort((nombre1 , nombre2) =>  nombre1.nombre.localeCompare(nombre2.nombre)));
+    //Comparar la edad
+    //Comparar dos alumnos por la nota media
+    </script>
+</body>
+</html>

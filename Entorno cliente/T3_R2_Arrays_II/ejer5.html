@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function paresImpares() {
+    // Crear un array con 100 números aleatorios entre 1 y 1000
+    const numeros = Array.from({ length: 100 }, () => Math.floor(Math.random() * 1000) + 1);
+
+    // Mostrar el array original
+    console.log("Array original:", numeros);
+
+    // Organizar el array para que estén juntos pares e impares
+    const pares = numeros.filter(num => num % 2 === 0);
+    const impares = numeros.filter(num => num % 2 !== 0);
+
+    const arrayOrdenado = [...pares, ...impares];
+
+    // Mostrar el array organizado
+    console.log("Array organizado (pares e impares separados):", arrayOrdenado);
+}
+
+// Llamada de ejemplo
+paresImpares();
+
+    </script>
+</body>
+</html>

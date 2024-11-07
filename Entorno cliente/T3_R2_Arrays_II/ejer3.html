@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    clase =["Gabriel, 20, 5, 4, 2",
+    "María, 22, 7, 8, 9",
+    "Carlos, 21, 6, 5, 7",
+    "Lucía, 23, 8, 9, 10"];
+    function edadMedia() {
+    let totalEdad = 0;
+    for (let i = 0; i < clase.length; i++) {
+        let edad = parseInt(clase[i].split(", ")[1]);
+        totalEdad += edad;
+    }
+    return totalEdad / clase.length;
+}
+console.log(edadMedia());
+    </script>
+</body>
+</html>

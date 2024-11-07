@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const clase =["Gabriel, 20, 5, 4, 2"];
+
+        const nota = (nombre, trimestre = null) =>{
+            if(clase[0] == nombre){
+                switch(trimestre){
+                    case 1==trimestre: return parseInt(clase[1]); break;
+                    case 2==trimestre: return parseInt(clase[2]); break;
+                    case 3==trimestre: return parseInt(clase[3]); break;
+                    default: parseInt(clase[1])+parseInt(clase[2])+parseInt(clase[3]); break;
+                }
+            }
+        }
+        console.log(nota("Gabriel",2));
+    </script>
+</body>
+</html>

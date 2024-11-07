@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const clase = [
+    "Gabriel, 20, 5, 4, 2",
+    "María, 22, 7, 8, 9",
+    "Carlos, 21, 6, 5, 7",
+    "Lucía, 23, 8, 9, 10"
+    ];
+
+    function seleccionarEstudianteAleatorio() {
+    // Generar un índice aleatorio
+    const indiceAleatorio = Math.floor(Math.random() * clase.length);
+    
+    // Extraer el nombre del estudiante, que está en la posición 0 después de dividir el string
+    const nombre = clase[indiceAleatorio].split(", ")[0];
+    
+    return nombre;
+    }
+    console.log(seleccionarEstudianteAleatorio());
+</script>
+</body>
+</html>

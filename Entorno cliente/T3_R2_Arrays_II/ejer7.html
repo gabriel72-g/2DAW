@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inicializarArrayACero(array) {
+    for (let i = 0; i < 10; i++) {
+        array[i] = 0;
+    }
+}
+function incrementarArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] += 1;
+    }
+}
+function mostrarArray(array) {
+    console.log(array.join(" "));
+}
+// Crear un array de 10 elementos con valores aleatorios
+let miArray = Array.from({ length: 10 }, () => Math.floor(Math.random() * 10) + 1);
+
+console.log("Array original:");
+mostrarArray(miArray);   // Muestra el array inicial
+
+inicializarArrayACero(miArray);
+console.log("Array después de establecer a cero:");
+mostrarArray(miArray);   // Muestra el array después de establecerlo a cero
+
+incrementarArray(miArray);
+console.log("Array después de incrementar en 1:");
+mostrarArray(miArray);   // Muestra el array después de incrementar cada elemento en 1
+
+    </script>
+</body>
+</html>

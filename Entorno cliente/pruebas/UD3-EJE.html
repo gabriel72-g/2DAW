@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Usuario(dni,nombre,edad){
+            this.dni =dni;
+            this.nombre=nombre;
+            this.edad=edad;
+            this.showMe = function(){
+                console.log(`Dni: ${this.dni} --Nombre:${this.nombre}`)
+            }
+        }
+        let objuser1=new Usuario('7554444X','Juan',16);
+        console.log(objuser1);
+        console.log(objuser1.dni);
+        objuser1.showMe();
+        const usuarios = [];
+        usuarios.push(new Usuario('5674aaaaa','Exo',20));
+        usuarios.push(new Usuario('5674aaaaa','Exo',30));
+        console.log(usuarios);
+        class Empleado{
+            constructor(codigo,nombre,telefono){
+                this.codigo = codigo
+                this.nombre = nombre
+                this.telefono = telefono
+            }
+            muestraEmpleado(){
+                console.log("Empleado:"+this.codigo+"-"+this.nombre);
+            }
+        }
+        let objEmp1 = new Empleado(1,'Maria',655556)
+        console.log(objEmp1);
+        const arclas=[];
+          arclas.push(new Empleado(2,'Juan',234567))
+          arclas.push(new Empleado(3,'Juan2',234567))
+          console.log(arclas);
+    </script>
+</body>
+</html>

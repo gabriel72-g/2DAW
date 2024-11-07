@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ let ar = [1,2,3,4,5];
+
+ function doble(arr){
+    let arrdoble =[];
+    arr.forEach(element => {
+        arrdoble.push(element*2);
+    });
+    return arrdoble
+ }
+ function intro(arr,fun){
+    const i = [];
+    arr.forEach(element =>{
+    i.push(fun(element))
+    });
+    return i
+ }
+ arrMod = intro(ar,valor => valor-1)
+ console.log(doble(ar))
+console.log(arrMod)
+
+function filtrar(arr, fun){
+    const i = [];
+    
+    
+    arr.forEach(element =>{
+        if(fun(element)){
+        i.push(fun(element))
+        }
+    });
+
+    return i
+}
+arrFil = intro([5,8,2,1], valor => valor>5)
+console.log(arrFil)
+
+
+    </script>
+   
+</body>
+</html>

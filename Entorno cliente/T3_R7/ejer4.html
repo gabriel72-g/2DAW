@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const casa={
+            calle: "",
+            numero: "",
+            codigo_postal:"",
+            setNumero: function(n){
+                this.numero=n;
+            },
+            setCalle:function(cal){
+                this.calle=cal;
+            },
+            setCodigoPostal:function(cod){
+                this.codigo_postal=cod;
+            },
+            imprimeCalle(){
+                console.log(this.calle);
+            },
+            imprimeNumero(){
+                console.log(this.numero);
+            },
+            imprimeCodigoPostal(){
+                console.log(this.codigo_postal);
+            }
+        }
+        casa.setNumero(2);
+        console.log(casa.numero);
+        casa.setCalle("Luis de Gongora");
+        console.log(casa.calle);
+        casa.setCodigoPostal(18220);
+        console.log(casa.setCodigoPostal);
+        
+
+    </script>
+</body>
+</html>
