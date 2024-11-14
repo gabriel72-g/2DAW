@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul id="hobby-list">
+    <li class="hobby">Playing the banjo</li>
+    <li class="hobby"> Paddleboarding</li>
+</ul>
+<div>
+
+</div>
+    <script>
+        var hobbiesList = document.getElementById('hobby-list')
+        var hobbies = document.getElementsByTagName('li');
+        var alsoHobbies = document.getElementsByClassName('hobby');
+        
+        var firstHobby = document.querySelector('ul li.hobby');
+        var againAlsoHobbies = document.querySelectorAll(' ul li.hobby');
+       
+        console.log(hobbiesList)
+        let nododiv = document.getElementsByTagName('div')[0];
+        let crear = document.createElement('p');
+        let texto = document.createTextNode("hola");
+        nododiv.appendChild(crear)
+        for(i=0;i<3;i++){
+            
+            crear.appendChild(texto);
+            nododiv.appendChild(crear);
+        }
+    </script>
+</body>
+</html>

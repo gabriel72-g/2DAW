@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="lista">
+        
+    </ol>
+    <button onclick="añadir()">Añadir</button>
+    <script>
+        function añadir(){
+        let nuevo = prompt("Escriba algo"); 
+
+        let lista = document.getElementById("lista");
+        let crear_lista = document.createElement("li");
+        crear_lista.textContent=nuevo;
+        lista.appendChild(crear_lista);
+        }
+        </script>
+</body>
+</html>

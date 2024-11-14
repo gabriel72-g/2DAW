@@ -25,6 +25,21 @@
                 
             ]
         }
+        function Colegio(nom,nu_aul,num_alum){
+            this.nom = nom;
+            this.nu_aul = nu_aul;
+            this.num_alum = num_alum;
+            this.alumno =  [];
+        for(let i = 0;i< num_alum;i++){
+            this.alumno.push({
+                id:i,
+                nombre:"alumno"+i,
+                nota: 5
+            })
+        }
+        }
+        const Colegio1 = new Colegio("AAA",2,3);
+        console.log(Colegio1)
     </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="texto">
+    <p id="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consectetur at vel sed commodi expedita deserunt dolorem voluptatum maiores repellat suscipit consequuntur sapiente molestias reprehenderit illo, ipsa incidunt optio provident!</p>
+    </div>
+    <button class="boton" onclick="crear()">Ver Articulo Completo</button>
+    <button class="boton" onclick="borrar()">cerrar</button>
+    <script>
+        function crear(){
+
+            if(!document.getElementById("nuevo")){
+
+            let di = document.getElementById("texto");
+            let crear_secion = document.createElement("p");
+            crear_secion.id= "nuevo";
+           crear_secion.textContent="hola como está";
+            di.appendChild(crear_secion);
+            }
+        }
+        function borrar(){
+            if(document.getElementById("nuevo")){
+               let nuevo_p = document.getElementById("nuevo");
+               nuevo_p.remove();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+nav{
+    background-color: aqua;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+nav ul li:first-child{
+    margin-right: auto;
+}
+nav ul li {
+    margin: 0 15px;            /* Espaciado entre los elementos */
+}
+nav ul li img{
+    width: 50px;
+    height: 30px;
+}
+.libros{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    margin-left:200px;
+}
+.inicio {
+    display: flex;
+    justify-content: space-between; /* Coloca el texto a la izquierda y la imagen a la derecha */
+    align-items: center;            /* Centra verticalmente la imagen y el texto */
+    padding: 20px;
+    background-color: red;
+    margin-bottom: 20px;
+}
+.libros img{
+    width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.intermedio{
+    display: flex;
+    justify-content: space-between; /* Coloca el texto a la izquierda y la imagen a la derecha */
+    align-items: center;            /* Centra verticalmente la imagen y el texto */
+    padding: 20px;
+    background-color: red;  
+    margin-bottom: 20px;
+}
+.intermedio img{
+    width: 300px;
+    height: auto;
+} 
+.intermedio div{
+    flex-direction: column;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+
+/* SPRUEBA */
+.autores {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.autores_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.autores_cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.autor_card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+
+.autor_card img {
+    width: 100%;
+    display: block;
+    height: 200px;
+    border-radius: 10px 10px 0 0 ;
+    object-fit: cover;
+}
+
+.autor_texts h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.autor_texts p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.autor_texts a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
