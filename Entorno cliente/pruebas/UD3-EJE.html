@@ -23,7 +23,15 @@
         usuarios.push(new Usuario('5674aaaaa','Exo',20));
         usuarios.push(new Usuario('5674aaaaa','Exo',30));
         console.log(usuarios);
-        class Empleado{
+        let objEmp1 = new Empleado(1,'Maria',655556)
+        console.log(objEmp1);
+        const arclas=[];
+          arclas.push(new Empleado(2,'Juan',234567))
+          arclas.push(new Empleado(3,'Juan2',234567))
+          console.log(arclas);
+
+        
+          class Empleado{
             constructor(codigo,nombre,telefono){
                 this.codigo = codigo
                 this.nombre = nombre
@@ -33,12 +41,11 @@
                 console.log("Empleado:"+this.codigo+"-"+this.nombre);
             }
         }
-        let objEmp1 = new Empleado(1,'Maria',655556)
-        console.log(objEmp1);
-        const arclas=[];
-          arclas.push(new Empleado(2,'Juan',234567))
-          arclas.push(new Empleado(3,'Juan2',234567))
-          console.log(arclas);
+
+        function emp(){
+            
+        }
+
     </script>
 </body>
 </html>

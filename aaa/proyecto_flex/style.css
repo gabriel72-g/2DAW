@@ -1,21 +1,10 @@
-nav{
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+--color-cudros:linear-gradient( #66BB6A, #388E3C) ;
+--color-titulo:#fff;
+--texto:'Libre Franklin', sans-serif;
 }
-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-}
-nav ul li:first-child{
-    margin-right: auto;
-}
-nav ul li {
-    margin: 0 15px;            /* Espaciado entre los elementos */
-}
-nav ul li img{
-    width: 50px;
-    height: 30px;
-}
+
 .libros{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -24,12 +13,21 @@ nav ul li img{
 }
 .inicio {
     display: flex;
-    justify-content: space-between; /* Coloca el texto a la izquierda y la imagen a la derecha */
-    align-items: center;            /* Centra verticalmente la imagen y el texto */
+    justify-content: space-between; 
+    align-items: flex-start;           
     padding: 20px;
-    background-color: red;
+    background: var(--color-cudros);
     margin-bottom: 20px;
 }
+.inicio h2{
+    color:var(--color-titulo);
+    font-family:var(--texto) ;
+}
+.inicio p{
+    font-family:var(--texto) ;
+    color:var(--color-titulo);
+}
+
 .libros img{
     width: 200px;
     height: 300px;
@@ -37,27 +35,22 @@ nav ul li img{
 }
 .intermedio{
     display: flex;
-    justify-content: space-between; /* Coloca el texto a la izquierda y la imagen a la derecha */
-    align-items: center;            /* Centra verticalmente la imagen y el texto */
+    justify-content: space-between; 
+    align-items: center;           
     padding: 20px;
-    background-color: red;  
+    background: var(--color-cudros);  
     margin-bottom: 20px;
 }
 .intermedio img{
     width: 300px;
     height: auto;
 } 
-.intermedio div{
+.intermedio{
     flex-direction: column;
-}
-footer ul{
-    display: flex;
-    list-style: none;
-    flex-direction: column;
+    font-family:var(--texto) ;
+    color:var(--color-titulo);
 }
 
-
-/* SPRUEBA */
 .autores {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -89,7 +82,7 @@ footer ul{
     max-width: 300px;
     text-align: center;
     padding: 20px;
-    transition: transform 0.3s;
+
 }
 
 
@@ -103,11 +96,13 @@ footer ul{
 
 .autor_texts h3 {
     font-size: 1.2rem;
+    font-family:var(--texto) ;
     margin: 10px 0;
 }
 
 .autor_texts p {
     font-size: 0.9rem;
+    font-family:var(--texto) ;
     color: #555;
     margin-bottom: 15px;
 }
@@ -118,4 +113,23 @@ footer ul{
     text-decoration: none;
     font-weight: bold;
     
+}
+
+nav {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;       
+    background: var(--color-cudros); 
+    padding: 10px 20px;         
+}
+
+
+nav a {
+    margin: 0 15px;            
+    text-decoration: none;     
+    color: #fff;               
+}
+
+nav a:hover {
+    text-decoration: underline; 
 }
