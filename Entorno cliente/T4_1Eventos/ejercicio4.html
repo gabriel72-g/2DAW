@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        #dibuja {
             display: grid;
-            grid-template-columns: repeat(10, 5px);
-
+            grid-template-columns: repeat(1000, 5px);
+            border: solid 2px black;
         }
 
         div {
@@ -20,9 +20,10 @@
 </head>
 
 <body>
-
+    <section id="dibuja"></section>
     <script>
         let cuerpo = document.body;
+        let dibujo = document.getElementById("dibuja");
         let ctrl = false;
         let Shift = false;
         let x = false;
@@ -63,10 +64,10 @@
             }
         })
         function pintar() {
-            for (i = 0; i < 10; i++) {
-                for (e = 0; e < 10; e++) {
+            for (i = 0; i < 100; i++) {
+                for (e = 0; e < 100; e++) {
                     let div = document.createElement('div');
-                    cuerpo.appendChild(div);
+                    dibujo.appendChild(div);
 
                     div.addEventListener("mouseover", () => {
                             if (ctrl) {
@@ -91,6 +92,12 @@
              
           }) 
     </script>
+    
+    <section>
+        <p>Shift pulsado para dibujar en azul</p>
+        <p>Control pulsado para dibujar azul</p>
+        <p>X pulsado para borrar lo dibujado</p>
+    </section>
 </body>
 
 </html>
