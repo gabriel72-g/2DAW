@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="text"></textarea>
+    <script>
+     let cuerpo = document.body;
+     let text = document.getElementById("text");
+     let and = false;
+     
+     cuerpo.addEventListener("keydown",(event)=>{
+       if(event.key ==="&"){
+            and = true;
+            console.log("hola");
+       } 
+     })
+     text.addEventListener("blur",()=>{
+        if(and){
+            text.value+="and"; 
+            and=false;
+            console.log("si que funciona")
+        }
+     }) 
+
+    </script>
+</body>
+</html>

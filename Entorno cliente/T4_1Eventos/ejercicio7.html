@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nombre">nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    <label for="correo">Correo</label>
+    <input type="email" name="correo" id="correo">
+    <br>
+    <label for="comentario">comentario</label>
+    <textarea name="comentario" id="com"></textarea>
+<script>
+    let cuerpo = document.body;
+    let text = document.getElementById("com");
+    let nombre = document.getElementById("nombre");
+    let correo = document.getElementById("correo");
+
+    let p = document.createElement('p');
+
+    nombre.addEventListener("focus",()=>{
+        p.textContent="Escriba su nombre";
+    })
+
+    correo.addEventListener("focus",()=>{
+        p.textContent="Escriba su correo";
+    })
+
+    text.addEventListener("focus",()=>{
+        p.textContent="Escriba lo que quiera";
+    })
+    
+    nombre.addEventListener("blur",()=>{
+        p.textContent="";
+    })
+
+    correo.addEventListener("blur",()=>{
+        p.textContent="";
+    })
+
+    text.addEventListener("blur",()=>{
+      p.textContent="";
+    })
+
+    cuerpo.appendChild(p);
+</script>
+</body>
+</html>

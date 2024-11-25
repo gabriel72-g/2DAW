@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <main id="main">
+    <div id="secion">
+    <a href="#" onclick="normal()">Tema normal</a>
+    <a href="#" onclick="color()">Tema minimalista</a>
+    </div>
+    <h1>Pagina de ejemplo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique veritatis, facere tempora aperiam laudantium temporibus repellendus doloribus ex quaerat illo aspernatur atque dolorum tempore sequi fugit eveniet minima, ducimus minus!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error voluptate facere eaque a atque eius, modi dolores officia minus, aperiam perferendis. Dolorem quidem cum nam ullam sint laboriosam perferendis illum!</p>
+    <p id="negrita">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iusto nemo animi! Aut dolor accusantium, accusamus, quod placeat eligendi molestiae, ipsum quidem totam ex itaque deleniti maxime tempora inventore molestias.</p>
+    <p id="caja">Lorem ipsum dolor sit amet consectetur adi
+        pisicing elit. Iste quaerat laboriosam incidunt dignissimos aliquam in et, nesciunt quam, architecto natus excepturi nostrum eum minima neque eveniet. Fugit dicta molestiae nobis.</p>
+    </main>
+
+    <script>
+        function color(){
+        let cuerpo = document.body;
+        let main = document.getElementById("main");
+        let p = document.getElementById("negrita")
+        let caja = document.getElementById("caja");
+        let a = document.getElementById("secion");
+        let div = document.createElement("aside");
+        div.style.backgroundColor = "blue";
+        div.style.width = "80%";
+        div.style.height = "auto";
+        cuerpo.appendChild(div);
+        cuerpo.style.backgroundColor = "#ffffcc" ;
+        p.style.fontWeight ="bold";
+        caja.style.border = "2px solid black";
+        caja.style.backgroundColor = "yellow"
+        a.style.border = "2px solid black";
+        a.style.backgroundColor ="lightblue";
+        a.style.textDecoration ="none";
+        a.style.color = "blue";
+        a.style.fontWeight ="bold";
+
+        
+    }
+    function normal(){
+
+    }
+        </script>
+</body>
+</html>

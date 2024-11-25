@@ -7,21 +7,17 @@ import { arrArticulos } from "./modulos/articulos.mjs";
   h.textContent="Hola";
   document.body.appendChild(h);
   console.log(arrArticulos);
-
+  let br = document.createElement("br");
+  let imagen = document.createElement("img");
+  let fragmento = document.createDocumentFragment();
+  let sextion = document.createElement("section");
   arrArticulos.forEach((articulo) => {
-    let h = document.createElement("p");
-    let br = document.createElement("br");
-    let imagen = document.createElement("img");
-    
-    h.textContent="id:"+articulo.id+" titulo "+articulo.title+
-    " precio "+articulo.price+" descripcion "+articulo.description+
-    " categoria "+articulo.category+" rating: rate"+articulo.rating.rate+" count "+articulo.rating.count;
-    h.appendChild(br);
-    imagen.src=articulo.image;
-    h.appendChild(imagen);
-    document.body.appendChild(h);
-    console.log(articulo);
+    let h2 = document.createElement("p");
+    h2.textContent="id:"+articulo.id;
+    fragmento.appendChild(h2);
+
   });
+  sextion.appendChild(fragmento);
 })();
 
 

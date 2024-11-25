@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="des= setInterval(contador,1000)">Start</button>
+    <button onclick="clearTimeout(des)">Stop</button>
+    <button onclick="clearTimeout(des),limpiar()">Reset</button>    
+
+    <section id="reloj">
+
+    </section>
+    <script>
+      let secion = document.getElementById("reloj");
+      let p = document.createElement('p');
+      p.textContent="0:0";
+      secion.appendChild(p);
+
+        let seg=0;
+        let min=0;
+        function contador(){
+
+            seg++
+           
+            if(seg==61){
+               min++
+               seg=0;
+            p.textContent=min+":"+seg;
+            }else{
+            p.textContent=min+":"+seg;
+            }
+            secion.appendChild(p);
+        }
+        function limpiar(){
+            seg=0;
+            min=0;
+            p.textContent="0:0";
+        }
+         
+
+    </script>
+</body>
+</html>

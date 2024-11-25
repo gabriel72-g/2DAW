@@ -1,0 +1,22 @@
+
+nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+nav ul li{
+    margin: auto;
+    align-content: center;
+    width: 30%;
+    height: 90px;
+    color: white;
+ transition: background-color 1s ease-in;
+ background-color: black;
+}
+
+
+
+li:hover{
+  height: 100px;
+  background-color: yellow; 
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<section>
+
+</section>
+    <script>
+        let section = document.querySelector('section');
+         section.addEventListener("mousemove",()=>{
+            console.log("x : "+event.x +" y:  "+event.y);
+         });
+        
+    </script>
+</body>
+</html>

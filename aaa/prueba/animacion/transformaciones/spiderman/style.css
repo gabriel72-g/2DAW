@@ -1,0 +1,20 @@
+.container img{
+    transform: rotate(-90deg);
+}
+.container{
+    background-color: crimson;
+    height: 600px;
+    width: 90%;
+    margin: 80px auto;
+    overflow: hidden;
+}
+.spidy{
+    height: 500px;
+    transform: translateY(-120px);
+    transition: transform 1s ease-in-out;
+}
+
+.container:hover .spidy{
+    height: 500px;
+    transform: translateY(0);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(10, 5px);
+
+        }
+
+        div {
+            width: 5px;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let cuerpo = document.body;
+        let ctrl = false;
+        let Shift = false;
+        let x = false;
+
+        document.addEventListener("keydown",()=>{
+            if(event.key ==="x"){
+                x = true;
+            }
+        })
+
+        document.addEventListener("keydown",()=>{
+            if(event.key ==="Shift"){
+                Shift = true;
+            }
+        })
+
+        document.addEventListener("keydown",()=>{
+            if(event.key ==="Control"){
+                ctrl = true;
+            }
+        })
+
+        document.addEventListener("keyup",()=>{
+            if(event.key ==="x"){
+                x = false;
+            }
+        })
+
+        document.addEventListener("keyup",()=>{
+            if(event.key ==="Shift"){
+                Shift = false;
+            }
+        })
+
+        document.addEventListener("keyup",()=>{
+            if(event.key ==="Control"){
+                ctrl = false;
+            }
+        })
+        function pintar() {
+            for (i = 0; i < 10; i++) {
+                for (e = 0; e < 10; e++) {
+                    let div = document.createElement('div');
+                    cuerpo.appendChild(div);
+
+                    div.addEventListener("mouseover", () => {
+                            if (ctrl) {
+                                div.style.backgroundColor = "red"; 
+                            } else if(Shift){
+                                div.style.backgroundColor ="blue";
+                            } else if(x){
+                                div.style.backgroundColor = "white";
+                            }
+                    })
+                }
+
+            }
+
+        }
+
+        window.addEventListener("load", () => {
+            pintar();
+        })
+        cuerpo.addEventListener("keydown",()=>{
+                console.log(event);
+             
+          }) 
+    </script>
+</body>
+
+</html>

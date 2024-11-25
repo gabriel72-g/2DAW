@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section id="letras">
+    <p id="palabra"></p>
+</section>
+    <script>
+        let letras =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
+        "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        let palabra = ["p","a","l","b","r","a"];
+        let section = document.getElementById("letras");
+        let p = document.getElementById('palabra');
+
+
+        
+        for(i=0;i<letras.length;i++){
+            let boton = document.createElement('button');
+            
+            let le = letras[i]
+            boton.textContent=letras[i];
+            
+            boton.onclick= function (){
+                let esCorrecto = palabra.includes(p);
+                for(e=0;e<=palabra.length;e++){
+                    if(palabra[e] === le){
+               p.textContent=letras[i];
+              }else{
+                console.log("mu mal");
+              }
+                }
+              
+            }
+            
+            section.appendChild(boton);
+           
+
+
+        }
+        console.log(palabra.includes(letras[27]))
+    
+    </script>
+   
+</body>
+</html>

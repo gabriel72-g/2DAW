@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 80%;
+    margin: 30px auto;
+}
+h2{
+    border-bottom: 5px  solid blueviolet;
+    margin-bottom: 30px;
+}
+section{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(2,300px);
+    gap: 30px;
+}
+.caja{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.caja img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+.morado{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(138, 43, 226,0.5);
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    transform: translate(0%,100%);
+    transition: all 1s linear;
+}
+.caja:hover .morado{
+    transform: translate(0);
+    
+}
+.caja:hover img{
+    transform: scale(2);
+}
+
+.mostrar{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    transform: scale(0);
+    transition: transform 1s;
+}
+.mostrar:target{
+    transform: scale(1);
+}
+.mostrar_image{
+    width: 90%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    position: relative;
+}
+.mostrar_image img{
+    width: 100%;
+    height: 100%;
+}
+.mostrar__close{
+    background-color: crimson;
+    color: white;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

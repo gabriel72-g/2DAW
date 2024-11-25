@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+     grid-template-rows: 150px 150px 150px 150px ;
+
+}
+#texto{
+    background-color:#2658e4;
+    color: white;
+    grid-column: 4/6;
+    grid-row: 2/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 3em;
+    text-align: justify;
+    font-size: 26px;
+
+}
+#texto button{
+    color :#2658e4;
+    padding: 1em 3em;
+    align-self: flex-start;
+}
+#texto button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 5px white;
+}
+img{
+    width: 200%;
+    grid-column: 1/3;
+}
